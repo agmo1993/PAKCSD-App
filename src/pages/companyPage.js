@@ -18,8 +18,26 @@ import Typography from '@mui/material/Typography';
 import { useHistory, useParams } from 'react-router-dom'
 import mocklogo from '../components/companylogo.png';
 import Image from '../components/image';
+import EnergySavingsLeafIcon from '@mui/icons-material/EnergySavingsLeaf';
+import SocialDistanceIcon from '@mui/icons-material/SocialDistance';
+import TsunamiOutlinedIcon from '@mui/icons-material/TsunamiOutlined';
+import AssuredWorkloadOutlinedIcon from '@mui/icons-material/AssuredWorkloadOutlined';
+import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithoutContactOutlined';
+import ApprovalOutlinedIcon from '@mui/icons-material/ApprovalOutlined';
+import CardMembershipOutlinedIcon from '@mui/icons-material/CardMembershipOutlined';
 
 const drawerWidth = 240;
+
+const icons  = [
+  <InboxIcon />,
+  <EnergySavingsLeafIcon />,
+  <SocialDistanceIcon />,
+  <TsunamiOutlinedIcon />,
+  <AssuredWorkloadOutlinedIcon />,
+  <ConnectWithoutContactOutlinedIcon />,
+  <ApprovalOutlinedIcon />,
+  <CardMembershipOutlinedIcon />
+]
 
 function CompanyPage(props) {
   const { window } = props;
@@ -42,7 +60,7 @@ function CompanyPage(props) {
         'Frameworks signatory', 'Certifications '].map((text, index) => (
           <ListItem button key={text} onClick={() => setTextState(index)}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {icons[index]}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -59,10 +77,10 @@ function CompanyPage(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        color="transparent"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` }
+          ml: { sm: `${drawerWidth}px` },
+          bgcolor : '#7C947F'
         }}
       >
         <Toolbar>
@@ -78,6 +96,29 @@ function CompanyPage(props) {
           <Typography variant="h6" noWrap component="div">
             Company number {id}
           </Typography>
+          <Box 
+            sx={{
+              right : "5%",
+              position: 'absolute',
+              display : 'flex'
+            }}
+          >
+          <Typography 
+            variant="h6" 
+            component="div"
+            sx={{
+              marginRight : '30%'
+            }}
+          >
+            Home
+          </Typography>
+          <Typography 
+            variant="h6" 
+            component="div"
+          >
+            Directory
+          </Typography>
+          </Box>
         </Toolbar>
       </AppBar>
       <Box
@@ -114,7 +155,7 @@ function CompanyPage(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, bgcolor : '#C3CA84' }}
       >
         <Toolbar />
         <Typography paragraph>

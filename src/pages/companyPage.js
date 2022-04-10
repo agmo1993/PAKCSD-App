@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
@@ -11,7 +10,6 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -25,6 +23,10 @@ import AssuredWorkloadOutlinedIcon from '@mui/icons-material/AssuredWorkloadOutl
 import ConnectWithoutContactOutlinedIcon from '@mui/icons-material/ConnectWithoutContactOutlined';
 import ApprovalOutlinedIcon from '@mui/icons-material/ApprovalOutlined';
 import CardMembershipOutlinedIcon from '@mui/icons-material/CardMembershipOutlined';
+import CustomizedTables from '../components/tabs/table';
+import Link from '@mui/material/Link';
+import data from './companyData.json';
+
 
 const drawerWidth = 240;
 
@@ -39,6 +41,33 @@ const icons  = [
   <CardMembershipOutlinedIcon />
 ]
 
+const tabs  = [
+  "Company Summary",
+  <CustomizedTables />,
+  'Social Impact', 
+  'Climate Action',
+  'Governance Performance', 
+  'Method of Sustainability Communication', 
+  'Frameworks signatory',
+  'Certifications'
+]
+
+const pics = {
+  1 : require("../components/images/bata.png"),
+  2: require( "../components/images/bayer.png"),
+  3 : require("../components/images/interloop.png"),
+  4: require("../components/images/artistic.png"),
+  5: require("../components/images/colgate.png"),
+  6 : require("../components/images/dalda.png"),
+  7 : require("../components/images/daraz.png"),
+  8 : require("../components/images/baf.png"),
+  9 : require("../components/images/atlas.png"),
+  10: require("../components/images/mayfair.png"),
+  11 : require("../components/images/archroma.png"),
+  12 : require("../components/images/packages.png"),
+  13 : require( "../components/images/dawlence.png")
+}
+
 function CompanyPage(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -52,12 +81,11 @@ function CompanyPage(props) {
 
   const drawer = (
     <div>
-      <Image src={mocklogo} />
-      <Divider />
+      <Image src={pics[id]} />
       <List>
         {['Company Summary', 'Environmental Impact', 'Social Impact', 'Climate Action',
          'Governance Performance', 'Method of Sustainability Communication', 
-        'Frameworks signatory', 'Certifications '].map((text, index) => (
+        'Frameworks signatory', 'Certifications'].map((text, index) => (
           <ListItem button key={text} onClick={() => setTextState(index)}>
             <ListItemIcon>
               {icons[index]}
@@ -66,14 +94,13 @@ function CompanyPage(props) {
           </ListItem>
         ))}
       </List>
-      <Divider />
     </div>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', height: '100vh' }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -94,7 +121,9 @@ function CompanyPage(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Company number {id}
+            {
+              data.filter( x => x.id == id)[0].name
+            }
           </Typography>
           <Box 
             sx={{
@@ -110,7 +139,9 @@ function CompanyPage(props) {
               marginRight : '30%'
             }}
           >
+            <Link href="/" underline="none" color="inherit">
             Home
+            </Link>
           </Typography>
           <Typography 
             variant="h6" 
@@ -123,7 +154,9 @@ function CompanyPage(props) {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { sm: drawerWidth }, 
+              flexShrink: { sm: 0 },
+        }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -146,7 +179,11 @@ function CompanyPage(props) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { 
+              boxSizing: 'border-box', 
+              width: drawerWidth,
+              bgcolor : '#b6aa637a'  
+            },
           }}
           open
         >
@@ -155,35 +192,14 @@ function CompanyPage(props) {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, bgcolor : '#C3CA84' }}
+        sx={{ flexGrow: 1, 
+          p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }, bgcolor : '#C3CA84' }}
       >
         <Toolbar />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-          enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-          imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-          Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-          Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-          nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-          leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-          feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-          consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-          sapien faucibus et molestie ac.
-        </Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper
-          eget nulla facilisi etiam dignissim diam. Pulvinar elementum integer enim
-          neque volutpat ac tincidunt. Ornare suspendisse sed nisi lacus sed viverra
-          tellus. Purus sit amet volutpat consequat mauris. Elementum eu facilisis
-          sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-          tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit
-          gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-          et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis
-          tristique sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
+        <Typography paragraph >
+          {
+            tabs[textState]
+          }
         </Typography>
       </Box>
     </Box>

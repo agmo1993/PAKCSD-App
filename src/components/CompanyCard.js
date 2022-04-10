@@ -31,8 +31,8 @@ export default function CompanyCard({ name, sector, img, index }) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="100"
-          width="100"
+          height="200"
+          width="200"
           src={pics[img]}
         />
         <CardContent>

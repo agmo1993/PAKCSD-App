@@ -1,15 +1,15 @@
 [
-    { "id" : 1, "name" : "Bata", "sector" : "Textiles", "img" : "./images/bata.png"},
-    { "id" : 2, "name" : "Bayer", "sector" : "Pharmaceuticals", "img" : "./images/bayer.png"},
-    { "id" : 3, "name" : "Interloop", "sector" : "Textiles", "img" : "./images/interloop.png"},
-    { "id" : 4, "name" : "Artistic Milliners", "sector" : "Textiles", "img" : "./images/artistic.png"},
-    { "id" : 5, "name" : "Colgate Palmolative", "sector" : "FMCG", "img" : "./images/colgate.png"},
-    { "id" : 6, "name" : "Dalda", "sector" : "Food", "img" : "./images/dalda.png"},
-    { "id" : 7, "name" : "Daraz", "sector" : "E-commerce", "img" : "./images/daraz.png"},
-    { "id" : 8, "name" : "Bank Alfalah", "sector" : "Banking & Finance", "img" : "./images/baf.png"},
-    { "id" : 9, "name" : "Atlas", "sector" : "Automobiles", "img" : "./images/atlas.png"},
-    { "id" : 10, "name" : "Mayfair", "sector" : "Food", "img" : "./images/mayfair.png"},
-    { "id" : 11, "name" : "Archroma", "sector" : "Life Sciences", "img" : "./images/archroma.png"},
-    { "id" : 12, "name" : "Packages Limited", "sector" : "Packaging", "img" : "./images/packages.png"},
-    { "id" : 11, "name" : "Dawlence", "sector" : "Electronics", "img" : "./images/dawlence.png"}
+    { "id" : 1, "name" : "Bata", "sector" : "Textiles", "img" : "./images/bata.png", "SDG" : 3},
+    { "id" : 2, "name" : "Bayer", "sector" : "Pharmaceuticals", "img" : "./images/bayer.png", "SDG" : 4},
+    { "id" : 3, "name" : "Interloop", "sector" : "Textiles", "img" : "./images/interloop.png", "SDG" : 5},
+    { "id" : 4, "name" : "Artistic Milliners", "sector" : "Textiles", "img" : "./images/artistic.png", "SDG" : 5},
+    { "id" : 5, "name" : "Colgate Palmolative", "sector" : "FMCG", "img" : "./images/colgate.png", "SDG" : 3},
+    { "id" : 6, "name" : "Dalda", "sector" : "Food", "img" : "./images/dalda.png", "SDG" : 6},
+    { "id" : 7, "name" : "Daraz", "sector" : "E-commerce", "img" : "./images/daraz.png", "SDG" : 4},
+    { "id" : 8, "name" : "Bank Alfalah", "sector" : "Banking & Finance", "img" : "./images/baf.png", "SDG" : 5},
+    { "id" : 9, "name" : "Atlas", "sector" : "Automobiles", "img" : "./images/atlas.png", "SDG" : 3},
+    { "id" : 10, "name" : "Mayfair", "sector" : "Food", "img" : "./images/mayfair.png", "SDG" : 5},
+    { "id" : 11, "name" : "Archroma", "sector" : "Life Sciences", "img" : "./images/archroma.png", "SDG" : 6},
+    { "id" : 12, "name" : "Packages Limited", "sector" : "Packaging", "img" : "./images/packages.png", "SDG" : 6},
+    { "id" : 11, "name" : "Dawlence", "sector" : "Electronics", "img" : "./images/dawlence.png", "SDG" : 3}
 ]

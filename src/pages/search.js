@@ -4,12 +4,13 @@ import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import CompanyCard from '../components/CompanyCard';
 import Box from '@mui/material/Box';
-import Header from '../components/header';
 import ResponsiveAppBar from '../components/appBar';
-import { Link } from 'react-router-dom';
+import FilterSelect from '../components/select';
 
 export default function Search (){
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState("");
+  const [sdg, setSDG] = useState([]);
+
   return (
     <div>
     <ResponsiveAppBar />
@@ -24,16 +25,75 @@ export default function Search (){
       <Box
         sx={{
           display : 'flex' ,
+          flexWrap : 'wrap',
+          paddingLeft : '7.5%',
+          paddingRight : '5%'
+        }}
+        >
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"SDG"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"ESG"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"Topic"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"Category"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"Management Approach"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"Data public?"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"Framework signatory"}
+      />
+      <FilterSelect
+        items={[3, 4, 5, 6]}
+        selectValue={setSDG}
+        title={"Relevant certification"}
+      />
+      </Box>
+      <Box
+        sx={{
+          display : 'flex' ,
           flexWrap : 'wrap'
         }}
         >
       {
       Data.filter(post => {
         if (query === '') {
-          return post;
+          if (sdg.length === 0){ 
+            return post;
+          }
+          else if (sdg.includes(post.SDG)){
+            return post
+          }
         } else if (post.name.toLowerCase().includes(query.toLowerCase())) {
-          return post;
-        }
+          if (!sdg){ 
+              return post;
+          }
+          else if (sdg.includes(post.SDG)){
+              return post
+            }
+{}        }
       }).map((post, index) => {
         return (
             <CompanyCard 

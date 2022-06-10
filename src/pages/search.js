@@ -26,8 +26,8 @@ export default function Search (){
         sx={{
           display : 'flex' ,
           flexWrap : 'wrap',
-          paddingLeft : '7.5%',
-          paddingRight : '5%'
+          paddingLeft : [0, 0, 0, '7.5%', '7.5%'],
+          paddingRight : [0, 0, 0, '5%', '5%'],
         }}
         >
       <FilterSelect

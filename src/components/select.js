@@ -14,7 +14,7 @@ export default function FilterSelect({ title, items, selectValue }) {
   };
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 220 }} size="small">
+    <FormControl sx={{ m: 1, minWidth: [100, 100, 200, 220, 220] }} size="small">
       <InputLabel id="demo-select-small">{title}</InputLabel>
       <Select
         labelId={title}

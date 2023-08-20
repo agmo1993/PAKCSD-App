@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/PAKCSD-App/static/css/main.0fcfbe1b.css",
+    "main.js": "/PAKCSD-App/static/js/main.3ad97f49.js",
+    "static/js/787.2041420f.chunk.js": "/PAKCSD-App/static/js/787.2041420f.chunk.js",
+    "static/media/bayer.png": "/PAKCSD-App/static/media/bayer.7a984739e5eb71132c62.png",
+    "static/media/artistic.png": "/PAKCSD-App/static/media/artistic.860d8244b2b59a759529.png",
+    "static/media/mayfair.png": "/PAKCSD-App/static/media/mayfair.fb22c8716eb809295248.png",
+    "static/media/atlas.png": "/PAKCSD-App/static/media/atlas.758de9127a6b4126747e.png",
+    "static/media/dalda.png": "/PAKCSD-App/static/media/dalda.a45e6a160af3d5e57cc8.png",
+    "static/media/colgate.png": "/PAKCSD-App/static/media/colgate.6a5349ff0c81f27bee96.png",
+    "static/media/interloop.png": "/PAKCSD-App/static/media/interloop.c5602bbe2c654fd8fa33.png",
+    "static/media/packages.png": "/PAKCSD-App/static/media/packages.f732bbbc864723050f1c.png",
+    "static/media/daraz.png": "/PAKCSD-App/static/media/daraz.51a7ffc5bbbbf5d82c5b.png",
+    "static/media/bata.png": "/PAKCSD-App/static/media/bata.8e457dfc426b69977d41.png",
+    "static/media/baf.png": "/PAKCSD-App/static/media/baf.0bc885c25fbc2ed7e228.png",
+    "index.html": "/PAKCSD-App/index.html",
+    "main.0fcfbe1b.css.map": "/PAKCSD-App/static/css/main.0fcfbe1b.css.map",
+    "main.3ad97f49.js.map": "/PAKCSD-App/static/js/main.3ad97f49.js.map",
+    "787.2041420f.chunk.js.map": "/PAKCSD-App/static/js/787.2041420f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fcfbe1b.css",
+    "static/js/main.3ad97f49.js"
+  ]
+}

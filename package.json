@@ -1,7 +1,7 @@
 {
   "name": "pakcsd-app",
   "version": "0.1.0",
-  "homepage": "https://PakCSD.github.io/PAKCSD-App",
+  "homepage": "https://agmo1993.github.io/PAKCSD-App",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.8.2",
@@ -12,8 +12,8 @@
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "proptypes": "^1.1.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "react-stickynode": "^4.0.0",
